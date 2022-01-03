@@ -2,20 +2,20 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var cors = require("cors");
-const basicAuth = require('express-basic-auth');
+// const basicAuth = require('express-basic-auth');
 
 var app = express();
 
 app.use(cors());
 
-app.use(basicAuth ({
-  users: { 'innosoft' : 'eventiaegc2021'}
-}));
+// app.use(basicAuth ({
+//   users: { 'innosoft' : 'eventiaegc2021'}
+// }));
 
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-frontendURL = process.env.FRONTEND_URL || "localhost:8080"
+frontendURL = process.env.VUE_APP_FRONTEND_URL || "localhost:8080"
 
 app.get("/", (req, res) => {
   res.redirect(frontendURL);

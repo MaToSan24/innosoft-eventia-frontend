@@ -3,7 +3,7 @@ const moment = require('moment');
 const dotenv = require("dotenv");
 dotenv.config({ path: require('find-config')('.env') });
 
-let backendUrl = process.env.BACKEND_URL || "http://localhost:3000/api/v1"
+let backendUrl = process.env.VUE_APP_BACKEND_URL || "http://localhost:3000/api/v1"
 
 module.exports = (ctx) => {
 

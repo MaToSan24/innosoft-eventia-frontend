@@ -42,9 +42,6 @@ export default {
     Button,
     Toast,
   },
-  created(){
-    this.signIn();
-  },
   data() {
     return {
         username: this.$store.state.username,
@@ -52,6 +49,9 @@ export default {
     }
   },
   methods: {
+    created(){
+      this.signIn();
+    },
     signIn() {
       this.$store.dispatch("saveUsername", this.username);
       this.$store.dispatch("savePassword", this.password);
@@ -64,7 +64,7 @@ export default {
         })
         .then(resp => {
           console.log(resp.data);
-          window.location.href = '/';
+          this.$router.push("/home");
           this.$toast.add({severity:'success', summary: 'Successful', detail: 'Logged in successfully', life: 3000});
         }).catch(err => {
           console.log(err);

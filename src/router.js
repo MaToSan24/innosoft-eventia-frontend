@@ -1,14 +1,14 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import axios from 'axios';
-import Crud from './views/CrudDemo.vue';
+import Home from './views/Home.vue';
 import Login from './views/Login.vue';
 
 const routes = [
     {
-        path: '/',
-        name: 'crud',
+        path: '/home',
+        name: 'Home',
         meta: { requiresAuth: true },
-        component: Crud,
+        component: Home,
     },
     {
       path: '/login',
@@ -24,7 +24,8 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    axios.get('/api/v1/peticionesPublicacion')
+    axios.get('/peticionesPublicacion')
+    .then(next())
     .catch(err => {
       if (err.response.status === 401) {
         next({

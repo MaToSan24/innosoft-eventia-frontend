@@ -25,6 +25,16 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     axios.get('/peticionesPublicacion')
+    .then((req) => {
+      if (req.config.headers.Authorization){
+        next()
+      }else{
+        next({
+          path: '/login',
+          query: { redirect: to.fullPath }
+        })
+      }
+    })
     .catch(err => {
       if (err.response.status === 401) {
         next({

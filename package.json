@@ -14,6 +14,7 @@
 		"ci": "start-test \"npm run start\" 8080 test",
 		"test": "mocha tests/unit/*.js --timeout 15000",
 		"cypress:open": "cypress open",
+		"cypress:run": "cypress run",
 		"postinstall": "node borrarGtoken.js"
 	},
 	"devDependencies": {

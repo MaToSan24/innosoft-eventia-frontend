@@ -64,7 +64,7 @@ export default {
         })
         .then(resp => {
           console.log(resp.data);
-          this.$router.push("/home");
+          this.$router.push("/");
           this.$toast.add({severity:'success', summary: 'Successful', detail: 'Logged in successfully', life: 3000});
         }).catch(err => {
           console.log(err);

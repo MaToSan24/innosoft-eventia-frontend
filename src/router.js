@@ -25,7 +25,6 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     axios.get('/peticionesPublicacion')
-    .then(next())
     .catch(err => {
       if (err.response.status === 401) {
         next({

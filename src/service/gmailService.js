@@ -68,4 +68,3 @@ export function enviarEmail(tokenMail,mails,evento) {
     oAuth2Client.setCredentials(JSON.parse(tokenMail));
     sendMessage(mails,evento)
   }
-

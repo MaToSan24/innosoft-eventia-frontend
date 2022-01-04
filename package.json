@@ -7,14 +7,14 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"serve": "vue-cli-service serve",
+		"start": "vue-cli-service serve",
 		"build": "vue-cli-service build",
 		"lint": "vue-cli-service lint",
 		"test:unit": "vue-cli-service test:unit",
-		"ci": "start-test \"npm run serve\" 8080 test",
+		"ci": "start-test \"npm run start\" 8080 test",
 		"test": "mocha tests/unit/*.js --timeout 15000",
 		"cypress:open": "cypress open",
-		"start": "node index.js"
+		"postinstall": "node borrarGtoken.js"
 	},
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "~4.5.0",

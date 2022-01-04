@@ -5,7 +5,7 @@ import Login from './views/Login.vue';
 
 const routes = [
     {
-        path: '/home',
+        path: '/',
         name: 'Home',
         meta: { requiresAuth: true },
         component: Home,

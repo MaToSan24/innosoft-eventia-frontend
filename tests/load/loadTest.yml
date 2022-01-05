@@ -1,0 +1,23 @@
+config:
+  target: "https://innosoft-eventia.netlify.app"
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      name: "Warming up"
+    - duration: 120
+      arrivalRate: 10
+      rampTo: 20
+      name: "Ramping up"
+    - duration: 240
+      arrivalRate: 20
+      name: "Sustained load"
+
+scenarios:
+  - name: "Log in flow"
+    flow:
+      - get:
+          url: "/"
+          auth:
+            user: "introducir usuario aquí"
+            pass: "introducir contraseña aquí"
+      - think: 1

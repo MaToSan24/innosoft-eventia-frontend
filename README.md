@@ -9,3 +9,9 @@ La aplicación Eventia brindará un servicio de automatización de publicación 
 * [Torrado Sánchez, Mariano Manuel](https://github.com/MaToSan24)
 * [Torregrosa Domínguez, Ángel](https://github.com/angtordom1)
 * [Viñuelas Perales, Antonio](https://github.com/antvinper)
+
+# Screenshots
+
+![image](https://user-images.githubusercontent.com/63660411/228245279-8066639d-fe52-4c77-9c6d-6c388d74d0ed.png)
+![image](https://user-images.githubusercontent.com/63660411/228247209-094ab1b0-4580-4f77-b11e-42bf23d3f726.png)
+![image](https://user-images.githubusercontent.com/63660411/228248163-0194572e-2ee1-4a74-80cf-0037d3fa98bf.png)
